@@ -25,6 +25,3 @@ make
 
 aur1111 says "Hello world!"
 
-# Write-up compilation instructions
-./pdfmake.sh
-
