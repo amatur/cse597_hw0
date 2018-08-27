@@ -1,0 +1,148 @@
+\documentclass{article}
+% Change "article" to "report" to get rid of page number on title page
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{setspace}
+\usepackage{Tabbing}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{extramarks}
+\usepackage{url}
+\usepackage{chngpage}
+\usepackage{longtable}
+%\usepackage{subfigure}
+\usepackage{soul,color}
+\usepackage{graphicx,float,wrapfig}
+%\usepackage{caption,subcaption}
+\usepackage{enumitem}
+\usepackage{morefloats}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{indentfirst}
+\usepackage{lscape}
+\usepackage{pdflscape}
+\usepackage{natbib}
+\usepackage[toc,page]{appendix}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1} \times}}
+
+% In case you need to adjust margins:
+%\topmargin=-0.45in      % Switch to the other top for overleaf
+\topmargin=0.25in      %
+\evensidemargin=0in     %
+\oddsidemargin=0in      %
+\textwidth=6.5in        %
+%\textheight=9.75in       % play with this for overleaf
+\textheight=9.25in       %
+\headsep=0.25in         %
+
+% Homework Specific Information
+\newcommand{\hmwkTitle}{Introductions}
+\newcommand{\hmwkDueDate}{Monday,\ August\  27,\ 2018}
+\newcommand{\hmwkClass}{Homework 0}
+\newcommand{\hmwkClassTime}{CSE 597}
+\newcommand{\hmwkClassInstructor}{ } \newcommand{\hmwkAuthorNameb}{Amatur Rahman, PSU Username: aur1111}
+\newcommand{\hmwkNames}{aur1111}
+
+% Setup the header and footer
+\pagestyle{fancy}
+\lhead{\hmwkNames}
+\rhead{\hmwkClass: \hmwkTitle} 
+\cfoot{Page\ \thepage\ of\ \pageref{LastPage}}
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Make title
+\title{\vspace{2in}\textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\\normalsize\vspace{0.1in}\small{\hmwkDueDate}\\\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}\vspace{3in}}
+\date{}
+\author{\textbf{\hmwkAuthorNameb} } % \\ \textbf{\hmwkAuthorNamea}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\begin{spacing}{1.1}
+\maketitle
+
+\newpage
+\section{Syllabus Acknowledgement}
+
+By turning in this assignment, I, Amatur Rahman, acknowledge that I have received and understand the course syllabus information available on \url{sites.psu.edu/psucse597fall2018}. 
+
+
+\section{Introduction}
+
+My name is Amatur Rahman.  I am a first year phD student in the Computer Science and Engineering department. My programming experience includes C, C++, Java and Python. I have no prior experience in programming with parallelization methods or high performance computing. My research is mostly computational in nature. 
+
+My area of interest is computational biology, where I want to focus primarily on designing efficient algorithms and tools for bioinformatics applications. Good general references in my field are \cite{gusfield1997algorithms} and \cite{gentleman2006bioinformatics}.  Good computational references in my field are \cite{trelles2001parallelisation} and \cite{he2011mathematics}. 
+
+
+\subsection{Accounts}
+
+I have gotten an account on ACI using \url{https://ics.psu.edu/?page_id=57}.  My ACI username is \texttt{aur1111}.
+
+I have gotten an account on XSEDE using \url{https://portal.xsede.org/my-xsede?p_p_id=58&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&saveLastPath=0&_58_struts_action=%2Flogin%2Fcreate_account}.  My username is \texttt{amatur}.
+
+I will be making my assignments available using \textbf{github}. My username is \texttt{amatur}. 
+
+\subsection{My Course Project}
+
+I am currently thinking about choosing ``DNA Forensics using Paralellized Matrix Multiplication" as my $Ax=b$ problem for the semester project. I would like to speed up the process of DNA sample comparisons mentioned in \cite{samsi2017linear}. I believe that this will be a good project because
+\begin{itemize}
+  \item The reference dataset is huge, so the effectiveness of optimization techniques will be clearly visible.
+  \item The problem has a parallel structure, which can be made faster by the concepts taught at CSE 597 course. 
+  \item As I am relatively new in computational biology, doing this project will enhance my understanding in the field, and boost my experience in working with large biological dataset. The dataset is also easily obtainable.
+\end{itemize}
+
+
+\section{HW 0 Code and Writeup}
+
+You can get my assignment onto ACI using the command:
+
+\begin{verbatim}
+git clone git@github.com:amatur/cse597_hw0
+\end{verbatim}
+
+
+\subsection{Program overview}
+
+This is a serial hello world program, written in C. There is only one code file. The repository also contains the makefile for creating the executable, a readme, licensing information and the tex file for the write-up.
+
+
+\subsection{Instructions for running and verifying the code}
+
+\textbf{Creating the executable:}
+\begin{verbatim}
+module load gcc/7.3.1
+make
+\end{verbatim}
+
+\textbf{Running the program:}
+\begin{verbatim}
+./hello.out
+\end{verbatim}
+
+\textbf{Expected output:}
+\begin{verbatim}
+aur1111 says "Hello, World!"
+\end{verbatim}
+
+\subsection{Instructions for compiling the write-up}
+
+I used ACI to compile the document.  You can do this using the command:
+\begin{verbatim}
+./pdfmake.sh
+\end{verbatim}
+
+
+\section{Acknowledgements}
+
+I would like to acknowledge Dr. Adam Lavely and Dr. Chris Blanton for providing us with the template to generate this PDF file, the code and license files. Also, I want to thank Dr. Lavely for walking us through the homework problem.
+
+\bibliographystyle{acm}
+\bibliography{hw0_cse597_27Aug2018_aur1111}
+
+\end{spacing}
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}}
